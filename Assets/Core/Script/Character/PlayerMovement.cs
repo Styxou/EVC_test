@@ -43,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Transform orientation;
     public Climbing climbingScript;
-    [SerializeField] PlayerGrind PlayerGrind;
 
 
     [Header("Vfx")]
@@ -199,9 +198,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (climbingScript.bExtigingWall) return;
 
-        if (PlayerGrind.onRail) return;
-
-        // calculate movement direction
+             // calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         if (Onslope()&&!exitingSlope)
         {

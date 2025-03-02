@@ -23,7 +23,6 @@ public class PlayerGrind : MonoBehaviour
     [SerializeField] LayerMask whatIsRail;
     [SerializeField] Camera cam;
     Rigidbody rb;
-    Wapeon Weapon;
 
     Grappling Grappling;
 
@@ -44,7 +43,6 @@ public class PlayerGrind : MonoBehaviour
 
 
         rb = GetComponent<Rigidbody>();
-        Weapon = GetComponent<Wapeon>();
         Grappling = GetComponent<Grappling>();
 
         AnimatorVfxBzzz1 = VfxBzzz1.GetComponent<Animator>();
@@ -229,8 +227,6 @@ public class PlayerGrind : MonoBehaviour
     {
         if (collision.gameObject.layer == 8)
         {
-            Weapon.IsChained = true;
-            Weapon.ActivateUI();
             onRail = true;
             currentRailScript = collision.gameObject.GetComponent<RailScript>();
             CalculateAndSetRailPosition();

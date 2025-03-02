@@ -48,7 +48,6 @@ public class WallRunning : MonoBehaviour
     private PlayerMovement pm;
     private Rigidbody rb;
     public PlayerCam cam;
-    [SerializeField] Wapeon Weapon;
 
     [Header("Gravity")]
     public bool useGravity;
@@ -187,8 +186,6 @@ public class WallRunning : MonoBehaviour
 
     private void StartWallRun()
     {
-        Weapon.IsHasten = true;
-        Weapon.ActivateUI();
         pm.wallRunning = true;
 
         wallRunTimer = maxWallRuntime;
