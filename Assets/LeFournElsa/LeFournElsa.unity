@@ -11145,6 +11145,115 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 588644933}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &595692104
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 595692105}
+  - component: {fileID: 595692108}
+  - component: {fileID: 595692107}
+  - component: {fileID: 595692106}
+  m_Layer: 7
+  m_Name: Cube (18)_01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &595692105
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595692104}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.44097203, y: -0, z: -0, w: 0.8975209}
+  m_LocalPosition: {x: -26.91, y: 0.4, z: -15.1}
+  m_LocalScale: {x: 46.650124, y: 9.902312, z: 0.22320147}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1983603050}
+  m_LocalEulerAnglesHint: {x: 52.332, y: 0, z: 0}
+--- !u!65 &595692106
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595692104}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &595692107
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595692104}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8a85f7e84bafda84ab288cbcadc2221a, type: 2}
+  - {fileID: 2100000, guid: 4c5d6d014033c69468d8075b0428ee07, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &595692108
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 595692104}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &651641783
 GameObject:
   m_ObjectHideFlags: 0
@@ -22157,7 +22266,7 @@ GameObject:
   - component: {fileID: 987557562}
   - component: {fileID: 987557561}
   - component: {fileID: 987557560}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22266,7 +22375,7 @@ GameObject:
   - component: {fileID: 1036111119}
   - component: {fileID: 1036111118}
   - component: {fileID: 1036111117}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22590,7 +22699,7 @@ GameObject:
   - component: {fileID: 1161078699}
   - component: {fileID: 1161078698}
   - component: {fileID: 1161078697}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28242,7 +28351,7 @@ GameObject:
   - component: {fileID: 1471756706}
   - component: {fileID: 1471756705}
   - component: {fileID: 1471756704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28909,7 +29018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1733766680
 Transform:
   m_ObjectHideFlags: 0
@@ -29327,7 +29436,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983603050}
   m_Layer: 0
-  m_Name: decors
+  m_Name: Environment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29352,6 +29461,7 @@ Transform:
   - {fileID: 284157011}
   - {fileID: 1096625231}
   - {fileID: 1594615302}
+  - {fileID: 595692105}
   - {fileID: 2143456023}
   - {fileID: 651641784}
   - {fileID: 429666238}
@@ -29586,7 +29696,7 @@ GameObject:
   - component: {fileID: 2057580430}
   - component: {fileID: 2057580429}
   - component: {fileID: 2057580428}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30076,7 +30186,7 @@ MonoBehaviour:
   playerHeight: 2
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   grounded: 0
   orientation: {fileID: 1433825416}
   climbingScript: {fileID: 2122926243}
@@ -30135,31 +30245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b465beeedd35de498c89f151513db63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 963194228}
-  attackPoint: {fileID: 1066812610}
-  objectToThrow: {fileID: 3256192472531505518, guid: 5f270e7e62537e84d82b15e7c3f5db9c, type: 3}
-  buildingMod: {fileID: 0}
-  TotalThrow: 100
-  throwCooldown: 0.5
-  throwKey: 323
-  throwForce: 50
-  IsChained: 0
-  TimerChain: 200
-  CurrentTimerChain: 0
-  IsHasten: 0
-  HastApplied: 0
-  TimerHast: 200
-  CurrentTimerHast: 0
-  ThrowHastenModificator: 5
-  bangVfx: {fileID: 682571074}
-  LayoutUi: {fileID: 1165967451}
-  UiChained: {fileID: 920892922300617618, guid: ebfaae126943a5b4db156874b8439b50, type: 3}
-  CurrentUiCHained: {fileID: 0}
-  UiIsActivChained: 0
-  UiHast: {fileID: 3417592981177734955, guid: e46fee48f87685a4889530348f80c7cb, type: 3}
-  CurrentUiHast: {fileID: 0}
-  UiIsActivHast: 0
-  readyToThrow: 0
 --- !u!114 &2122926243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30299,37 +30384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9ac11c7689012e4a958ebb0733d0b49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RailKey: 114
-  BuildKey: 323
-  wallKey: 116
-  buildingModKey: 98
-  MeshRendererWeapon: {fileID: 2093567264}
-  BuildingLineRenderer: {fileID: 740063064}
-  MainCamTransform: {fileID: 963194228}
-  WeaponTransform: {fileID: 740063063}
-  Ui: {fileID: 0}
-  WeaponMaterial:
-  - {fileID: 2100000, guid: cdc04819bf65d374eb169ea7dc8b5d37, type: 2}
-  - {fileID: 2100000, guid: dd8643eeacd911d45b3bdd790977c98f, type: 2}
-  LineRendererMaxPoint: 10
-  LineRendererMinPoint: 2
-  bIsBuilding: 0
-  CurrentLineRendererPoint: 5
-  lineLayerMask:
-    m_Bits: 0
-  RailPrefab: {fileID: 4463602023172135500, guid: 7a228ffc8ebc0714e8beabdb0e286d01, type: 3}
-  MaxRailPoint: 3
-  CurrentRailPoint: 0
-  SplinePointList: []
-  MarkerWall: {fileID: 2493131247494707053, guid: e8bdd07690703ff48826dbfdccab3bd0, type: 3}
-  Wall: {fileID: 6373193824405652447, guid: 817e3023074f3d14fac5851fd056f57e, type: 3}
-  wallMaterial: {fileID: 2100000, guid: 8a85f7e84bafda84ab288cbcadc2221a, type: 2}
-  currentWall: {fileID: 0}
-  startWall: {fileID: 0}
-  endWall: {fileID: 0}
-  markerCounter: 0
-  currentlyBuildingWall: 0
-  state: 0
 --- !u!114 &2122926247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30342,12 +30396,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85fe0f8275d8234d98639692c8cd22d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuildingMod: {fileID: 0}
-  UIBuilding: {fileID: 0}
-  UIMods: {fileID: 1634377338}
-  uiBuildActivated: 0
-  WallUi: {fileID: 1894800130}
-  uiWallActivated: 0
 --- !u!1 &2143456022
 GameObject:
   m_ObjectHideFlags: 0
