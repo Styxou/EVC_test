@@ -39,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     public bool grounded;
+
+    [Header("Respawn")]
+    public Vector3 Checkpoint;
     
     [Header("References")]
     public Transform orientation;
@@ -85,6 +88,8 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
+
+        Checkpoint = gameObject.transform.position;
     }
 
   
@@ -353,6 +358,25 @@ public class PlayerMovement : MonoBehaviour
             ResetRestriction();
 
             GetComponent<Grappling>().StopGrapple();
+        }
+
+        if (collision.gameObject.layer == 10)
+        {
+            gameObject.transform.position = Checkpoint;
+
+        }
+
+        
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 11)
+        {
+            Debug.Log("Checkpoint");
+            Checkpoint = other.gameObject.transform.GetChild(0).transform.position;
+
         }
     }
 
