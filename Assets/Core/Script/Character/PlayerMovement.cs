@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Skill")]
+    public bool CanWallRun = true;
+    public bool CanClimb = true;
+    public bool CanGrab = true;
+
     [Header("Mouvement")]
     private float moveSpeed;
     public float walkSpeed;
@@ -46,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("References")]
     public Transform orientation;
     public Climbing climbingScript;
+    [SerializeField] WallRunning WallRunningScript;
+    [SerializeField] Grappling GrapplingScript;
 
 
     [Header("Vfx")]
@@ -376,8 +383,17 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Checkpoint");
             Checkpoint = other.gameObject.transform.GetChild(0).transform.position;
+        }
+
+        if (other.gameObject.layer == 12)
+        {
+           SkillCheckpoint skillCheckpoint = other.gameObject.GetComponent<SkillCheckpoint>();
+           CanWallRun = skillCheckpoint.CanWallRun;
+           CanClimb = skillCheckpoint.CanClimb;
+           CanGrab = skillCheckpoint.CanGrab;
 
         }
+
     }
 
     private Vector3 GetSlopeMoveDirection()
