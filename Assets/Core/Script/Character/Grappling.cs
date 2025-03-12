@@ -83,24 +83,33 @@ public class Grappling : MonoBehaviour
             //Raycast to find if we hit a target
             RaycastHit hit;
 
-            if (Physics.Raycast(cam.position, cam.forward, out hit, maxGrappleDistance, whatIsGrappleable))
+            if (Physics.Raycast(cam.position, cam.forward, out hit, maxGrappleDistance))
             {
-                grapplePoint = hit.point;
+                if (hit.transform.gameObject.layer == 7)
+                {
+                    grapplePoint = hit.point;
 
-                Invoke(nameof(ExecuteGrapple), grappleDelayTime);
+                    Invoke(nameof(ExecuteGrapple), grappleDelayTime);
 
-                Instantiate(VfxGrab2, grapplePoint, Quaternion.identity);
+                    Instantiate(VfxGrab2, grapplePoint, Quaternion.identity);
+                }
+                else
+                {
+                   grapplePoint = cam.position + cam.forward * maxGrappleDistance;
+
+                    Invoke(nameof(StopGrapple), grappleDelayTime);
+                }
+
 
             }
-            else
+            else 
             {
                 grapplePoint = cam.position + cam.forward * maxGrappleDistance;
 
                 Invoke(nameof(StopGrapple), grappleDelayTime);
+
             }
-
             lr.enabled = true;
-
         }
 
        
