@@ -143,10 +143,15 @@ public class Climbing : MonoBehaviour
 
     private void StartClimbing()
     {
-        climbing = true;
 
-        tLastWall = frontWallHit.transform;
-        lastWallNormal = frontWallHit.normal;
+        if(pm.CanClimb == true)
+        {
+            climbing = true;
+
+            tLastWall = frontWallHit.transform;
+            lastWallNormal = frontWallHit.normal;
+        }
+    
 
     }
     private void ClimbingMovement()
