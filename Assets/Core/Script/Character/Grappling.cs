@@ -95,11 +95,18 @@ public class Grappling : MonoBehaviour
                 }
                 else
                 {
-                    grapplePoint = cam.position + cam.forward * maxGrappleDistance;
+                   grapplePoint = cam.position + cam.forward * maxGrappleDistance;
 
                     Invoke(nameof(StopGrapple), grappleDelayTime);
                 }
-               
+
+
+            }
+            else 
+            {
+                grapplePoint = cam.position + cam.forward * maxGrappleDistance;
+
+                Invoke(nameof(StopGrapple), grappleDelayTime);
 
             }
             lr.enabled = true;
