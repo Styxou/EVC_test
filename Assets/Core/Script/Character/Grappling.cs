@@ -69,35 +69,50 @@ public class Grappling : MonoBehaviour
 
     private void StartGrapple()
     {
-        if (grapplingCdTimer > 0)
+        if(pm.CanGrab == true)
         {
-            return;
+            if (grapplingCdTimer > 0)
+            {
+                return;
+            }
+
+            bIsGrappling = true;
+
+            pm.bIsFreeze = true;
+
+            //Raycast to find if we hit a target
+            RaycastHit hit;
+
+            if (Physics.Raycast(cam.position, cam.forward, out hit, maxGrappleDistance))
+            {
+                if (hit.transform.gameObject.layer == 7)
+                {
+                    grapplePoint = hit.point;
+
+                    Invoke(nameof(ExecuteGrapple), grappleDelayTime);
+
+                    Instantiate(VfxGrab2, grapplePoint, Quaternion.identity);
+                }
+                else
+                {
+                   grapplePoint = cam.position + cam.forward * maxGrappleDistance;
+
+                    Invoke(nameof(StopGrapple), grappleDelayTime);
+                }
+
+
+            }
+            else 
+            {
+                grapplePoint = cam.position + cam.forward * maxGrappleDistance;
+
+                Invoke(nameof(StopGrapple), grappleDelayTime);
+
+            }
+            lr.enabled = true;
         }
 
-        bIsGrappling = true;
-
-        pm.bIsFreeze = true;
-
-        //Raycast to find if we hit a target
-        RaycastHit hit;
-
-        if(Physics.Raycast(cam.position,cam.forward, out hit, maxGrappleDistance, whatIsGrappleable))
-        {
-            grapplePoint = hit.point;
-
-            Invoke(nameof(ExecuteGrapple), grappleDelayTime);
-
-            Instantiate(VfxGrab2, grapplePoint, Quaternion.identity);
-
-        }
-        else
-        {
-            grapplePoint = cam.position + cam.forward * maxGrappleDistance;
-
-            Invoke(nameof(StopGrapple), grappleDelayTime);
-        }
-
-        lr.enabled = true;
+       
     }
     void DrawRope()
     {

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    [Header("Skill")]
+    public bool CanWallRun = true;
+    public bool CanClimb = true;
+    public bool CanGrab = true;
+
     [Header("Mouvement")]
     private float moveSpeed;
     public float walkSpeed;
@@ -39,10 +44,15 @@ public class PlayerMovement : MonoBehaviour
     public float playerHeight;
     public LayerMask whatIsGround;
     public bool grounded;
+
+    [Header("Respawn")]
+    public Vector3 Checkpoint;
     
     [Header("References")]
     public Transform orientation;
     public Climbing climbingScript;
+    [SerializeField] WallRunning WallRunningScript;
+    [SerializeField] Grappling GrapplingScript;
 
 
     [Header("Vfx")]
@@ -85,6 +95,8 @@ public class PlayerMovement : MonoBehaviour
         readyToJump = true;
 
         startYScale = transform.localScale.y;
+
+        Checkpoint = gameObject.transform.position;
     }
 
   
@@ -354,6 +366,34 @@ public class PlayerMovement : MonoBehaviour
 
             GetComponent<Grappling>().StopGrapple();
         }
+
+        if (collision.gameObject.layer == 10)
+        {
+            gameObject.transform.position = Checkpoint;
+
+        }
+
+        
+
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == 11)
+        {
+            Debug.Log("Checkpoint");
+            Checkpoint = other.gameObject.transform.GetChild(0).transform.position;
+        }
+
+        if (other.gameObject.layer == 12)
+        {
+           SkillCheckpoint skillCheckpoint = other.gameObject.GetComponent<SkillCheckpoint>();
+           CanWallRun = skillCheckpoint.CanWallRun;
+           CanClimb = skillCheckpoint.CanClimb;
+           CanGrab = skillCheckpoint.CanGrab;
+
+        }
+
     }
 
     private Vector3 GetSlopeMoveDirection()
