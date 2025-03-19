@@ -186,22 +186,27 @@ public class WallRunning : MonoBehaviour
 
     private void StartWallRun()
     {
-        pm.wallRunning = true;
+        if(pm.CanWallRun == true)
+        {
+            pm.wallRunning = true;
 
-        wallRunTimer = maxWallRuntime;
+            wallRunTimer = maxWallRuntime;
 
-        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+            rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
 
-        //cam fov
-        cam.DoFov(camFov);
-        if (wallLeft) cam.DoTile(-camTilt);
-        if (wallRight) cam.DoTile(camTilt);
+            //cam fov
+            cam.DoFov(camFov);
+            if (wallLeft) cam.DoTile(-camTilt);
+            if (wallRight) cam.DoTile(camTilt);
 
-        VfxDash.SetActive(true);
-        VfxDash2.SetActive(true);
+            VfxDash.SetActive(true);
+            VfxDash2.SetActive(true);
 
-        AnimatorVfxDash1.speed = 1;
-        AnimatorVfxDash2.speed = 1;
+            AnimatorVfxDash1.speed = 1;
+            AnimatorVfxDash2.speed = 1;
+        }
+
+      
 
     }
 
