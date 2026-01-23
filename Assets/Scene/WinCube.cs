@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class WinCube : MonoBehaviour
 {
     public Transform nextCheckpoint;
