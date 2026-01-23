@@ -15,7 +15,7 @@ public class Climbing : MonoBehaviour
     [Header("Climbing")]
     public float climbSpeed;
     public float maxClimbTime;
-    public float jumpForce;
+    public float jumpForceMultiplicater;
     private float climbTimer;
     
     private bool climbing;
@@ -53,6 +53,11 @@ public class Climbing : MonoBehaviour
     private Transform tLastWall;
     private Vector3 lastWallNormal;
 
+
+    private void Start()
+    {
+        jumpForceMultiplicater = jumpForceMultiplicater * pm.jumpForce;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -170,7 +175,7 @@ public class Climbing : MonoBehaviour
     {
         //add force
         rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-        rb.AddForce(jumpForce * -orientation.forward, ForceMode.Impulse);
+        rb.AddForce(jumpForceMultiplicater * -orientation.forward, ForceMode.Impulse);
     }
 
     private void ClimbJum()
