@@ -138,6 +138,8 @@ public class WallRunning : MonoBehaviour
             if (wallRunTimer > 0)
             {
                 wallRunTimer -= Time.deltaTime;
+                Debug.Log("Wallrun Time" + wallRunTimer);
+                Debug.Log(Time.deltaTime);
 
             }
 
