@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed;
     public float groundDrag;
     public float wallrunSpeed;
-
+    
     [Header("Jumping")]
     public float jumpForce;
     public float jumpCooldown;
@@ -199,9 +199,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             state = MovementState.air;
-
-        } 
-
+        }
     }
 
     private void MovePlayer()
