@@ -5,12 +5,14 @@ using UnityEngine;
 public class WinCond : MonoBehaviour
 {
     [Header("Stage Complete")]
-    public bool PlayerWon;
+    public static bool PlayerWon = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
      void Start()
     {}
       // Update is called once per frame
       void Update()
-    {}
+    {
+      
+    }
  }
