@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7576434389541367907}
   - component: {fileID: 5648757137126856750}
+  - component: {fileID: -6230981809487859043}
   m_Layer: 0
   m_Name: EnnemyType1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49,12 +50,26 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 21.82, y: 2.29, z: 20.18}
   m_Center: {x: 0, y: 2.2043009, z: 0}
+--- !u!114 &-6230981809487859043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4534596191907557405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3f00b7669303e34fa45b1598ba65364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Athena.Prototype.CharacterFollow
+  targetObject: {fileID: 0}
+  speed: 3
 --- !u!1 &5364658449126077668
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +193,6 @@ GameObject:
   - component: {fileID: 7592514446628590393}
   - component: {fileID: 9090124606535429170}
   - component: {fileID: 1292183199554031769}
-  - component: {fileID: 6388445350775149417}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -258,26 +272,3 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6388445350775149417
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6720945559330327398}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}

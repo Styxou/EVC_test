@@ -1,22 +1,35 @@
 using UnityEngine;
+using System.Collections;
 
 namespace Athena.Prototype
 {
     public class CharacterFollow : MonoBehaviour
     {
-        public void OnTriggerEnter(Collider collision)
+        public GameObject targetObject;
+        public float speed = 3f;
+        private bool follow = false;
+
+        void Update()
         {
-            if (collision.CompareTag("Player"))
+            if (!follow || targetObject == null) return;
+
+            Vector3 targetPos = targetObject.transform.position;
+            targetPos.y = transform.position.y; // garder la hauteur
+
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                targetPos,
+                speed * Time.deltaTime
+            );
+        }
+
+        void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject == targetObject)
             {
-                print("je te suis");
+                follow = true;
             }
         }
-        public void OnTriggerExit(Collider collision)
-        {
-            if(collision.CompareTag("Player"))
-            {
-                print("je te suis plus");
-            }
-        }
+
     }
 }
