@@ -1,19 +1,17 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-public class ZoneTexte : MonoBehaviour
+public class TutorialZoneUI : MonoBehaviour
 {
-    public GameObject texteUI;
-
-    private void Start()
-    {
-        texteUI.SetActive(false);
-    }
+    [SerializeField] private GameObject tutorialTextUI;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            texteUI.SetActive(true);
+            tutorialTextUI.SetActive(true);
         }
     }
 
@@ -21,7 +19,7 @@ public class ZoneTexte : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            texteUI.SetActive(false);
+            tutorialTextUI.SetActive(false);
         }
     }
 }
