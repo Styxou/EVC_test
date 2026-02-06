@@ -8,7 +8,7 @@ public class Grappling : MonoBehaviour
     private PlayerMovement pm;
     public Transform cam;
     public Transform gunTip;
-    public LayerMask whatIsGrappleable;
+    public LayerMask whatIsGrappleable; 
 
     [Header("Grappling")]
     public float maxGrappleDistance;
@@ -85,7 +85,7 @@ public class Grappling : MonoBehaviour
 
             if (Physics.Raycast(cam.position, cam.forward, out hit, maxGrappleDistance))
             {
-                if (hit.transform.gameObject.layer == 7)
+                if (hit.transform.gameObject.layer == 7 || hit.transform.gameObject.layer == 13)
                 {
                     grapplePoint = hit.point;
 
