@@ -190,6 +190,7 @@ public class WallRunning : MonoBehaviour
         {
             pm.wallRunning = true;
 
+            //wallRunTimer = maxWallRuntime;
             wallRunTimer = maxWallRuntime;
 
             rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
