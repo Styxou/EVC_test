@@ -7,12 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestShader 10
+  m_Name: TestShader 13
   m_Shader: {fileID: -6465566751694194690, guid: c3119dd6057f0b84b81a67f5680cd001, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _EMISSION
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -62,8 +63,8 @@ Material:
     - _QueueOffset: 0
     m_Colors:
     - _Color: {r: 0, g: 0.6490326, b: 1, a: 0}
-    - _Dark_Color: {r: 0.85, g: 0, b: 0, a: 1}
-    - _Light_Color: {r: 0.4, g: 0, b: 0, a: 0}
+    - _Dark_Color: {r: 0, g: 0, b: 1, a: 0}
+    - _Light_Color: {r: 0, g: 0.5, b: 1, a: 0}
     - _Lit_color: {r: 3.66, g: 5.09, b: 3.57, a: 5.74}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
