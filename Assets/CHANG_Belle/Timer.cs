@@ -16,15 +16,18 @@ namespace Athena.Prototype
                 remainingTime -= Time.deltaTime;
 
             }
-            else if (remainingTime < 0)
+            else if (remainingTime <= 0)
             {
                 remainingTime = 0;
+                Debug.Log("Le joueur est mort - Temps écoulé !");
 
             }
 
             int minutes = Mathf.FloorToInt(remainingTime / 60);
             int seconds = Mathf.FloorToInt(remainingTime % 60);
             timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+
+
 
         }
     }
